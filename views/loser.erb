@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <style>
+      body {
+        background: white;
+        color: red;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+<body>
+  <h1> YOU LOST! </h1>
+
+  <p>The word was <%= session["game"].word %></p>
+  <p>Incorrect Guesses:  <%= session["game"].show_misses%> </p>
+
+    <form action='/new'>
+      <input type='submit' value='New Game' >
+    </form>
+  </body>
+</html>
